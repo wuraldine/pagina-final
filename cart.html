@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tech & Dev - Carrito</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
+	<body class="flex flex-col min-h-screen bg-gray-100">
+		<header class="mb-2">
+			<iframe
+				src="components/navbar.html"
+				class="w-full h-20 border-none"
+				frameborder="0"
+				scrolling="no">
+			</iframe>
+		</header>
+		<main class="flex-1 flex flex-col px-4 py-2">
+			<section class="flex flex-col items-center justify-center bg-white rounded-lg shadow p-4 mb-4">
+				<h1 class="text-center text-3xl font-bold text-blue-700 py-2 md:text-4xl lg:text-5xl">
+					Tu Carrito de Compras
+				</h1>
+			</section>
+			<section>
+				<div class="bg-white rounded-lg shadow-md p-6 mb-8">
+					<div class="overflow-x-auto">
+						<table class="w-full">
+							<thead>
+								<tr class="border-b">
+									<th class="text-left py-4">Producto</th>
+									<th class="text-center py-4">Precio</th>
+									<th class="text-center py-4">Cantidad</th>
+									<th class="text-center py-4">Total</th>
+									<th class="text-right py-4"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="border-b">
+									<td class="py-4">
+										<div class="flex items-center">
+											<img src="images/products/computers/laptop1.jpg" 
+												 alt="MacBook Pro"
+												 class="w-20 h-20 object-cover rounded"/>
+											<div class="ml-4">
+												<h3 class="text-lg font-bold">MacBook Pro M2</h3>
+												<p class="text-gray-600">13 pulgadas, Space Gray</p>
+											</div>
+										</div>
+									</td>
+									<td class="text-center py-4">$1,499</td>
+									<td class="text-center py-4">
+										<div class="flex items-center justify-center">
+											<button class="px-2 py-1 bg-gray-200 rounded-l">-</button>
+											<span class="px-4 py-1 border-t border-b">1</span>
+											<button class="px-2 py-1 bg-gray-200 rounded-r">+</button>
+										</div>
+									</td>
+									<td class="text-center py-4">$1,499</td>
+									<td class="text-right py-4">
+										<button class="text-red-500 hover:text-red-700">
+											Eliminar
+										</button>
+									</td>
+								</tr>
+								<tr class="border-b">
+									<td class="py-4">
+										<div class="flex items-center">
+											<img
+												src="images/products/accessories/headphones1.jpg"
+												alt="Auriculares"
+												class="w-20 h-20 object-cover rounded"/>
+											<div class="ml-4">
+												<h3 class="text-lg font-bold">Sony WH-1000XM4</h3>
+												<p class="text-gray-600">Color negro</p>
+											</div>
+										</div>
+									</td>
+									<td class="text-center py-4">$349</td>
+									<td class="text-center py-4">
+										<div class="flex items-center justify-center">
+											<button class="px-2 py-1 bg-gray-200 rounded-l">-</button>
+											<span class="px-4 py-1 border-t border-b">1</span>
+											<button class="px-2 py-1 bg-gray-200 rounded-r">+</button>
+										</div>
+									</td>
+									<td class="text-center py-4">$349</td>
+									<td class="text-right py-4">
+										<button class="text-red-500 hover:text-red-700">
+											Eliminar
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="flex flex-col md:flex-row justify-between">
+					<div class="w-full md:w-1/2 mb-6 md:mb-0 md:pr-4">
+						<div class="bg-white rounded-lg shadow-md p-6">
+							<h2 class="text-xl font-bold mb-4">Resumen de Compra</h2>
+							<div class="flex justify-between mb-2">
+								<span>Subtotal</span>
+								<span>$1,848</span>
+							</div>
+							<div class="flex justify-between mb-2">
+								<span>Envío</span>
+								<span>$0 (Gratis)</span>
+							</div>
+							<div class="flex justify-between mb-2">
+								<span>Impuestos</span>
+								<span>$295.68</span>
+							</div>
+							<div class="flex justify-between font-bold text-lg mt-4 pt-4 border-t">
+								<span>Total</span>
+								<span>$2,143.68</span>
+							</div>
+							<button class="w-full bg-green-600 text-white py-3 rounded-lg mt-6 hover:bg-green-700">
+								Proceder al Pago
+							</button>
+						</div>
+					</div>
+					<div class="w-full md:w-1/2 md:pl-4">
+						<div class="bg-white rounded-lg shadow-md p-6">
+							<h2 class="text-xl font-bold mb-4">Método de Pago</h2>
+							<div class="space-y-4">
+								<div class="flex items-center">
+									<input
+										type="radio"
+										id="credit-card"
+										name="payment"
+										checked
+										class="mr-2"/>
+									<label for="credit-card">Tarjeta de Crédito/Débito</label>
+								</div>
+								<div class="flex items-center">
+									<input type="radio" id="paypal" name="payment" class="mr-2" />
+									<label for="paypal">PayPal</label>
+								</div>
+								<div class="flex items-center">
+									<input
+										type="radio"
+										id="transfer"
+										name="payment"
+										class="mr-2"/>
+									<label for="transfer">Transferencia Bancaria</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<iframe
+				src="components/footer.html"
+				class="w-full min-h-[18rem] sm:min-h-[20rem] md:min-h-[14rem] lg:min-h-[15rem] border-none"
+				frameborder="0"
+				scrolling="no">
+			</iframe>
+		</footer>
+	</body>
+</html>
